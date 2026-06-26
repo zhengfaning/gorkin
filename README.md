@@ -26,7 +26,7 @@ Run this in your Go project root:
 npm install gorkin --save-dev
 
 # 2. Scaffold via 1-click init
-npx gorkin init
+npx @zhengfaning/gorkin init
 ```
 
 Running `init` will safely generate the following structure in your current directory (it will skip existing files to prevent overwriting):
@@ -97,15 +97,15 @@ That's it! The tool will automatically scan and align data from both sides upon 
 
 ## 🛠️ Command Line Interface
 
-Within your project, you can control the tool's entire lifecycle using `npx gorkin [command]`:
+Within your project, you can control the tool's entire lifecycle using `npx @zhengfaning/gorkin [command]`:
 
 | Command | Description |
 | :--- | :--- |
-| `npx gorkin init` | Smartly scaffolds config templates & demo code (includes anti-overwrite safety locks). |
-| `npx gorkin dev` | Starts the local dev server. Supports Markdown hot-reloading for real-time preview. |
-| `npx gorkin build`| Builds the production-ready static site (output generated in `.vitepress/dist`). |
-| `npx gorkin serve`| Locally previews the built production static site. |
-| `npx gorkin test` | Offline test command. Scans Go modules and executes a full suite of tests to generate linked reports. |
+| `npx @zhengfaning/gorkin init` | Smartly scaffolds config templates & demo code (includes anti-overwrite safety locks). |
+| `npx @zhengfaning/gorkin dev` | Starts the local dev server. Supports Markdown hot-reloading for real-time preview. |
+| `npx @zhengfaning/gorkin build`| Builds the production-ready static site (output generated in `.vitepress/dist`). |
+| `npx @zhengfaning/gorkin serve`| Locally previews the built production static site. |
+| `npx @zhengfaning/gorkin test` | Offline test command. Scans Go modules and executes a full suite of tests to generate linked reports. |
 
 > **💡 Pro Tip**: You can add these commands to your `package.json`'s `scripts` for quick launching, e.g., via `npm run docs:dev`.
 

@@ -1,0 +1,12 @@
+# Ignore local test reports and test config
+.reports/
+src/public/data/
+src/data/
+gorkin.config.js
+test-alias.js
+test-vite-glob.js
+*.tgz
+
+# Ignore VitePress build artifacts
+.vitepress/cache/
+.vitepress/dist/

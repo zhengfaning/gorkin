@@ -1,5 +1,5 @@
 {
-  "name": "gorkin",
+  "name": "@zhengfaning/gorkin",
   "version": "1.0.0",
   "description": "The Modern Living Documentation Generator for Go",
   "main": "index.js",
