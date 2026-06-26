@@ -1,6 +1,6 @@
 {
   "name": "@zhengfaning/gorkin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Modern Living Documentation Generator for Go",
   "main": "index.js",
   "bin": {
@@ -14,8 +14,16 @@
     "serve": "vitepress serve"
   },
   "keywords": [],
-  "author": "",
+  "author": "zhengfaning",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengfaning/gorkin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhengfaning/gorkin/issues"
+  },
+  "homepage": "https://github.com/zhengfaning/gorkin#readme",
   "dependencies": {
     "@cucumber/gherkin": "^41.0.0",
     "@cucumber/messages": "^33.0.3",
