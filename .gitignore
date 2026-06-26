@@ -1,0 +1,6 @@
+node_modules/
+.vitepress/dist
+.vitepress/cache
+.reports/
+src/public/data/test_results.json
+gorkin-*.tgz

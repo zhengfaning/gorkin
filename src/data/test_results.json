@@ -1,0 +1,162 @@
+{
+  "API_001": {
+    "state": "passed",
+    "runtime": 360461,
+    "location": {
+      "FileName": "api-server/internal/handler/config_handler_test.go",
+      "LineNumber": 86
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.099274663+08:00"
+  },
+  "API_002": {
+    "state": "passed",
+    "runtime": 361483,
+    "location": {
+      "FileName": "api-server/internal/handler/config_handler_test.go",
+      "LineNumber": 117
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.099932367+08:00"
+  },
+  "SLOT001_003": {
+    "state": "passed",
+    "runtime": 81853,
+    "location": {
+      "FileName": "games/slot001/feature_processors_test.go",
+      "LineNumber": 53
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.708967137+08:00"
+  },
+  "SLOT001_004": {
+    "state": "passed",
+    "runtime": 45736,
+    "location": {
+      "FileName": "games/slot001/feature_processors_test.go",
+      "LineNumber": 110
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.709197626+08:00"
+  },
+  "SLOT001_002": {
+    "state": "passed",
+    "runtime": 37340,
+    "location": {
+      "FileName": "games/slot001/feature_processors_test.go",
+      "LineNumber": 154
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.709313712+08:00"
+  },
+  "SLOT001_001": {
+    "state": "passed",
+    "runtime": 28513,
+    "location": {
+      "FileName": "games/slot001/config_test.go",
+      "LineNumber": 50
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:12.70950033+08:00"
+  },
+  "ENGINE_001": {
+    "state": "passed",
+    "runtime": 34745,
+    "location": {
+      "FileName": "pkg/engine/spin_engine_test.go",
+      "LineNumber": 54
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.073089601+08:00"
+  },
+  "ENGINE_002": {
+    "state": "passed",
+    "runtime": 30797,
+    "location": {
+      "FileName": "pkg/engine/spin_engine_test.go",
+      "LineNumber": 87
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.073145926+08:00"
+  },
+  "ENGINE_003": {
+    "state": "passed",
+    "runtime": 25838,
+    "location": {
+      "FileName": "pkg/engine/reel_strip_test.go",
+      "LineNumber": 21
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.07319092+08:00"
+  },
+  "ENGINE_004": {
+    "state": "passed",
+    "runtime": 39734,
+    "location": {
+      "FileName": "pkg/engine/reel_strip_test.go",
+      "LineNumber": 29
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.073229211+08:00"
+  },
+  "STATE_001": {
+    "state": "passed",
+    "runtime": 5996272,
+    "location": {
+      "FileName": "pkg/engine/state_store_test.go",
+      "LineNumber": 43
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.073290735+08:00"
+  },
+  "STATE_002": {
+    "state": "passed",
+    "runtime": 5329411,
+    "location": {
+      "FileName": "pkg/engine/state_store_test.go",
+      "LineNumber": 96
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.093565956+08:00"
+  },
+  "IDGEN_001": {
+    "state": "passed",
+    "runtime": 542157203,
+    "location": {
+      "FileName": "pkg/idgenerator/snowflake_test.go",
+      "LineNumber": 58
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:10.17523691+08:00"
+  },
+  "SETTLE_003": {
+    "state": "passed",
+    "runtime": 38423682,
+    "location": {
+      "FileName": "settlement-server/property_test.go",
+      "LineNumber": 27
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:18.713001028+08:00"
+  },
+  "SETTLE_002": {
+    "state": "passed",
+    "runtime": 5938053,
+    "location": {
+      "FileName": "settlement-server/queue_test.go",
+      "LineNumber": 176
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:18.799368714+08:00"
+  },
+  "SETTLE_001": {
+    "state": "passed",
+    "runtime": 10261260,
+    "location": {
+      "FileName": "settlement-server/queue_test.go",
+      "LineNumber": 258
+    },
+    "failure": null,
+    "startTime": "2026-06-23T23:29:18.81580533+08:00"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "gorkin",
+  "version": "1.0.0",
+  "description": "The Modern Living Documentation Generator for Go",
+  "main": "index.js",
+  "bin": {
+    "gorkin": "./bin/cli.js"
+  },
+  "scripts": {
+    "predev": "node scripts/preflight_check.js && node scripts/aggregate_reports.js",
+    "dev": "vitepress dev",
+    "prebuild": "node scripts/preflight_check.js && node scripts/aggregate_reports.js",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/gherkin": "^41.0.0",
+    "@cucumber/messages": "^33.0.3",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.38",
+    "lucide-vue-next": "^0.447.0"
+  }
+}

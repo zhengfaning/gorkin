@@ -1,0 +1,64 @@
+:root {
+  /* Premium Vibrant Colors */
+  --vp-c-brand-1: #6366f1;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #a855f7;
+
+  /* Gherkin Keywords (Pill backgrounds) */
+  --gherkin-given-bg: rgba(99, 102, 241, 0.1);
+  --gherkin-given-text: #6366f1;
+  --gherkin-when-bg: rgba(245, 158, 11, 0.1);
+  --gherkin-when-text: #f59e0b;
+  --gherkin-then-bg: rgba(16, 185, 129, 0.1);
+  --gherkin-then-text: #10b981;
+  --gherkin-and-bg: rgba(107, 114, 128, 0.1);
+  --gherkin-and-text: #6b7280;
+
+  /* Feature Hero Gradients */
+  --feature-hero-gradient-light: linear-gradient(135deg, #e0e7ff 0%, #f3e8ff 100%);
+  --feature-hero-gradient-dark: linear-gradient(135deg, #1e1b4b 0%, #3b0764 100%);
+  
+  /* Parameters & Strings */
+  --gherkin-param-bg: rgba(236, 72, 153, 0.1);
+  --gherkin-param-text: #db2777;
+  --gherkin-param-border: rgba(236, 72, 153, 0.2);
+  
+  --gherkin-string-bg: rgba(14, 165, 233, 0.1);
+  --gherkin-string-text: #0284c7;
+  --gherkin-string-border: rgba(14, 165, 233, 0.2);
+
+  --gherkin-timeline-line: #e5e7eb;
+}
+
+.dark {
+  --gherkin-given-text: #818cf8;
+  --gherkin-when-text: #fbbf24;
+  --gherkin-then-text: #34d399;
+  --gherkin-and-text: #9ca3af;
+  
+  --gherkin-param-text: #f472b6;
+  --gherkin-string-text: #38bdf8;
+  
+  --gherkin-timeline-line: #374151;
+}
+
+/* Base font adjustments */
+.gherkin-font {
+  font-family: 'Inter', 'Noto Sans SC', sans-serif;
+}
+.gherkin-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-feature-settings: 'liga' 1;
+}
+
+/* Base resets for animations */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Sidebar Truncation Enforcement */
+.VPSidebarItem .text {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
