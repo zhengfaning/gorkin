@@ -6,9 +6,10 @@ const { loadConfig } = require('../src/config/loader');
 const config = loadConfig();
 const reportsDir = config.reportsDir;
 
-if (!fs.existsSync(reportsDir)) {
-  fs.mkdirSync(reportsDir, { recursive: true });
+if (fs.existsSync(reportsDir)) {
+  fs.rmSync(reportsDir, { recursive: true, force: true });
 }
+fs.mkdirSync(reportsDir, { recursive: true });
 
 // Parse arguments
 const args = process.argv.slice(2);
@@ -32,8 +33,8 @@ function findGoModules(dir, modules = [], depth = 0) {
   }
 
   for (const file of files) {
-    // Ignore cache, vendor, deployment, and git dirs
-    if (['node_modules', '.git', 'deploy', 'mod', 'vendor', '.gemini', '.vitepress'].includes(file)) continue;
+    // Ignore hidden files/dirs (like .git, .reports) and common vendor/build dirs
+    if (file.startsWith('.') || ['node_modules', 'deploy', 'vendor', 'mod', 'dist'].includes(file)) continue;
     
     const fullPath = path.join(dir, file);
     if (fs.statSync(fullPath).isDirectory()) {
@@ -50,6 +51,8 @@ for (const mDir of config.modulesDir) {
 }
 console.log(`[Gorkin] Found Go modules in: ${modules.join(', ')}`);
 
+let hasError = false;
+
 const ginkgoCmd = 'go run github.com/onsi/ginkgo/v2/ginkgo';
 const filterArg = tagFilter ? `--label-filter="${tagFilter}"` : '';
 
@@ -58,9 +61,7 @@ for (const modPath of modules) {
   // or a relative path from the config.modulesDir. We'll just replace slashes.
   const modName = modPath.replace(/[/\\]/g, '_').replace(/^_+/, '');
   const reportPath = path.join(reportsDir, `${modName}_report.json`);
-  const relativeReportPath = path.relative(modPath, reportPath);
-  
-  const cmd = `${ginkgoCmd} ${filterArg} --json-report="${relativeReportPath}" -skip-package=mod ./...`;
+  const cmd = `${ginkgoCmd} ${filterArg} --json-report="${reportPath}" -skip-package=mod ./...`;
   console.log(`[Gorkin] Running in ${modName}: ${cmd}`);
   
   try {
@@ -70,9 +71,15 @@ for (const modPath of modules) {
     // Ginkgo returns non-zero if tests fail, we catch it so we don't crash the script 
     // and can proceed to the next module.
     console.error(`[Gorkin] Tests failed in module ${modName}.`);
+    hasError = true;
   }
 }
 
 console.log('[Gorkin] Aggregating JSON reports...');
 require('./aggregate_reports.js');
 console.log('[Gorkin] Dynamic Test Run Complete!');
+
+if (hasError) {
+  console.error('[Gorkin] ❌ Some test suites failed. Exiting with error code 1.');
+  process.exit(1);
+}

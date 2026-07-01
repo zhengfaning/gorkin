@@ -68,7 +68,9 @@ function parseReports() {
                 // Find matching module dir to make relative path
                 let relFileName = spec.LeafNodeLocation.FileName;
                 for (const mDir of config.modulesDir) {
-                  if (spec.LeafNodeLocation.FileName.startsWith(mDir)) {
+                  const normalizedFileName = spec.LeafNodeLocation.FileName.replace(/\\/g, '/');
+                  const normalizedMDir = mDir.replace(/\\/g, '/');
+                  if (normalizedFileName.startsWith(normalizedMDir)) {
                     relFileName = path.relative(mDir, spec.LeafNodeLocation.FileName);
                     break;
                   }
